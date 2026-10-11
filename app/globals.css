@@ -16,7 +16,7 @@ body{background:#fbf8f0}
 .hero-content{padding-top:115px}
 .hero h1{color:#123b2f;letter-spacing:-.045em}
 .hero h1 em{color:#a27d43}
-.hero-art{background:linear-gradient(155deg,#142e24a8,#163f3299),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat}
+.hero-art{background:linear-gradient(155deg,#142e24a8,#163f3299),url('/images/kerala-spa-hero.jpg') center/cover no-repeat}
 .hero-art .sun,.hero-art .leaf{display:none}
 .art-label{font-family:'Playfair Display',serif;font-size:17px;letter-spacing:.2em;text-shadow:0 2px 16px #0009}
 .hero-note{color:#5d7769}
@@ -30,14 +30,14 @@ body{background:#fbf8f0}
 .service-art{height:315px;position:relative;background-size:cover;background-position:center}
 .service-art span{display:none}
 .service-art:after{content:'KERALA WELLNESS';position:absolute;bottom:22px;left:25px;color:#fff;letter-spacing:.27em;font-size:10px;text-shadow:0 2px 9px #0009}
-.service-art.art0{background-image:linear-gradient(0deg,#092b237a,transparent 60%),url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=900&q=85')}
-.service-art.art1{background-image:linear-gradient(0deg,#092b237a,transparent 60%),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85')}
-.service-art.art2{background-image:linear-gradient(0deg,#092b237a,transparent 60%),url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=85')}
+.service-art.art0{background-image:linear-gradient(0deg,#092b237a,transparent 60%),url('/images/ayurveda-ritual.jpg')}
+.service-art.art1{background-image:linear-gradient(0deg,#092b237a,transparent 60%),url('/images/kerala-spa-hero.jpg')}
+.service-art.art2{background-image:linear-gradient(0deg,#092b237a,transparent 60%),url('/images/spa-therapy.jpg')}
 .service-copy{padding:32px}
 .service-copy h3{color:#143c2f}
 .service-copy button{font-weight:700;letter-spacing:.025em}
 .partner{background:linear-gradient(125deg,#092b23,#174d3b)}
-.partner-visual{background:linear-gradient(0deg,#092b237d,#092b2340),url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1200&q=85') center/cover no-repeat;color:#e5d7b100}
+.partner-visual{background:linear-gradient(0deg,#092b237d,#092b2340),url('/images/ayurveda-ritual.jpg') center/cover no-repeat;color:#e5d7b100}
 .locations{background:linear-gradient(180deg,#fbf8f0,#f0ecdf)}
 footer{background:#eae5d8}
 .modal{box-shadow:0 24px 80px #00150c50}
