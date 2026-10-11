@@ -39,7 +39,7 @@ export default function Admin(){
   sessionStorage.setItem('ksh_admin_session',JSON.stringify(value));setSession(value);setPassword('');
  }catch(e){setMessage(e instanceof Error?e.message:'Login failed')}finally{setLoading(false)}}
  async function reset(){setLoading(true);setMessage('');try{
-  await auth('recover',{email,gotrue:true});setMessage('Password reset email requested. Check your inbox.'); 
+  await auth('recover?redirect_to='+encodeURIComponent(window.location.origin+'/admin/'),{email});setMessage('Password reset email requested. Check your inbox.'); 
  }catch(e){setMessage(e instanceof Error?e.message:'Unable to send email')}finally{setLoading(false)}}
  async function updatePassword(e:FormEvent){e.preventDefault();if(!session)return;setLoading(true);try{
   const res=await fetch(BASE+'/auth/v1/user',{method:'PUT',headers:{apikey:KEY,Authorization:'Bearer '+session.access_token,'Content-Type':'application/json'},body:JSON.stringify({password:newPassword})});
