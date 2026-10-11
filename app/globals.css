@@ -75,3 +75,67 @@ footer{background:#eae5d8}
 @media(max-width:850px){.hero-content{padding-top:60px}.hero h1{font-size:clamp(47px,11vw,72px)}.hero-art{height:410px}.hero-photo-caption{bottom:20%}.editorial{grid-template-columns:1fr}.editorial-image{min-height:300px}.editorial-copy{padding:65px 7%}.heritage-strip{gap:10px}.heritage-strip p{font-size:8px;letter-spacing:.1em}}
 @media(max-width:600px){.hero-assurance{margin-top:25px;gap:7px}.hero-assurance span{font-size:9px;padding:8px}.hero-art{height:360px}.hero-photo-caption strong{font-size:38px}.hero-photo-caption span{font-size:9px}.hero-content{padding-bottom:35px}.hero-note{margin-top:25px}.intro{padding:75px 20px}.intro-seal{font-size:9px}.service-copy{padding:26px}.editorial-image{min-height:260px}.editorial-copy{padding:58px 7%}.editorial-copy h2{font-size:43px}.heritage-strip>span{display:none}.heritage-strip p{font-size:9px}}
 @media(prefers-reduced-motion:reduce){.service,.service-art,.primary,.nav-cta{transition:none!important}html{scroll-behavior:auto}}
+
+
+/* Royal Ayurveda Collection — final mobile-first refinement */
+:root{--royal:#063b2d;--champagne:#c7a46a}
+body{background:#faf7ef}
+.nav{position:sticky;top:0;z-index:12;backdrop-filter:blur(18px);background:#fcf9f2f2}
+.hero-content{padding-top:80px;padding-bottom:75px}
+.hero-sub{max-width:520px}
+.hero-art{background-position:center 45%}
+.hero-photo-caption{padding-right:30px}
+.hero-assurance span{border-color:#c9b89080;background:#fffaf080}
+.primary,.nav-cta,.service-copy .ritual-footer button{transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.primary:hover,.nav-cta:hover,.service-copy .ritual-footer button:hover{box-shadow:0 12px 26px #062e2330}
+.section-heading h2,.intro h2{letter-spacing:-.045em}
+.service-art{height:300px}
+.service-copy{padding:27px}
+.service-copy h3{font-size:clamp(27px,2.6vw,38px)}
+.service-copy .ritual-footer button{border-radius:3px}
+.pricing-note{border-color:#d5c5a3;background:linear-gradient(120deg,#e7e8db,#f2efe4)}
+.partner .primary{background:#dfc18a}
+.partner .primary:hover{background:#f0d9a6}
+footer{border-top:1px solid #c8b78f}
+@media(max-width:850px){
+ .hero-content{padding:52px 7% 38px}
+ .hero h1{font-size:clamp(46px,10.6vw,69px);line-height:1.1}
+ .hero-sub{line-height:1.75}
+ .hero-art{height:380px}
+ .intro{padding:66px 22px}
+ .services{padding:65px 6%}
+ .service-art{height:255px}
+ .service-copy{padding:24px}
+ .service-copy h3{font-size:32px}
+ .service-copy>p:not(.eyebrow){margin-bottom:0}
+ .ritual-details{margin-top:15px}
+ .pricing-note{margin-top:25px}
+ .booking-steps{margin-top:32px}
+ .booking-steps>div{padding:16px 10px 5px}
+}
+@media(max-width:600px){
+ .nav{height:74px}
+ .hero-content{padding-top:44px}
+ .hero h1{font-size:clamp(43px,10.7vw,64px);margin:20px 0}
+ .hero-sub{font-size:14px}
+ .actions{margin-top:25px;gap:18px}
+ .hero-assurance{margin-top:22px}
+ .hero-note{font-size:10px;line-height:1.7}
+ .hero-art{height:325px}
+ .hero-photo-caption{bottom:19%;left:7%}
+ .hero-photo-caption strong{font-size:34px}
+ .intro h2,.section-heading h2{font-size:clamp(39px,9vw,56px)}
+ .intro>p:not(.eyebrow){line-height:1.8}
+ .benefits{margin-top:36px}
+ .benefits div{padding:19px 8px}
+ .service-grid{gap:21px}
+ .service-art{height:235px}
+ .service-copy h3{font-size:30px}
+ .ritual-footer{align-items:stretch;flex-direction:column;gap:15px}
+ .service-copy .ritual-footer button{width:100%;min-height:48px}
+ .pricing-note{padding:20px}
+ .pricing-note strong{font-size:21px}
+ .pricing-note button{width:100%;min-height:48px}
+ .partner>div:first-child{padding:58px 7%}
+ .locations{padding:70px 20px}
+}
