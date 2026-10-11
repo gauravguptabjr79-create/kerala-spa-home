@@ -32,6 +32,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Bundle spa photography locally for GitHub Pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p public/images
+          curl -fLsS --retry 3 --connect-timeout 15 --max-time 90 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=80' -o public/images/kerala-spa-hero.jpg
+          curl -fLsS --retry 3 --connect-timeout 15 --max-time 90 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1000&q=80' -o public/images/ayurveda-ritual.jpg
+          curl -fLsS --retry 3 --connect-timeout 15 --max-time 90 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=80' -o public/images/spa-therapy.jpg
+          file public/images/*.jpg
+
       - name: Build static site
         run: npm run build
 
