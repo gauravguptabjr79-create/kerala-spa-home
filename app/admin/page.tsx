@@ -65,6 +65,7 @@ export default function Admin(){
  async function changeStatus(id:string,status:string){if(!confirm('Change status to '+status+'?'))return;setLoading(true);try{
   await request(tab+'?id=eq.'+encodeURIComponent(id),'PATCH',{status});await load();
  }catch(e){setMessage(e instanceof Error?e.message:'Status update failed')}finally{setLoading(false)}}
+ function sendConfirmation(item:RecordItem){const digits=String(item.phone||'').replace(/\D/g,'');const phone=digits.length===10?'91'+digits:digits;if(!/^91[6-9]\d{9}$/.test(phone)){setMessage('Invalid customer WhatsApp number');return}const time=prompt('Confirmed appointment time (e.g. 3:00 PM)');if(!time?.trim())return;const price=prompt('Final confirmed price in INR after discount and charges');if(!price||!/^\d+(\.\d{1,2})?$/.test(price.trim())){setMessage('Enter a valid final price');return}const msg=['KERALA SPA HOME - Booking Confirmation','Dear '+label(item.customer_name)+',','Your appointment is confirmed.','Service: '+label(item.service_name),'Date: '+label(item.preferred_date),'Time: '+time.trim(),'Location: '+label(item.address)+', '+label(item.city),'Final price: INR '+price.trim(),'Please reply to acknowledge.','keralaspahome.online'].join('\n');window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank','noopener,noreferrer');setMessage('WhatsApp opened. Tap Send, then mark the booking Confirmed in this dashboard.')}
  function logout(){sessionStorage.removeItem('ksh_admin_session');setSession(null);setRows({});setMessage('')}
  const fieldNames=tab==='customer_bookings'?['customer_name','phone','service_name','preferred_date','address','city']:['full_name','phone','city','specializations','experience_years'];
  return <main style={{minHeight:'100vh',background:'#f5f7f3',padding:'24px 16px',color:'#153f36',fontFamily:'system-ui,sans-serif'}}>
@@ -86,7 +87,7 @@ export default function Admin(){
  {(rows[tab]||[]).map(item=><article key={item.id} style={{background:'white',borderRadius:12,padding:18,marginBottom:12,overflowWrap:'anywhere'}}>
  <p><strong>Status: {label(item.status)}</strong> · {item.created_at?new Date(item.created_at).toLocaleString('en-IN',{timeZone:'Asia/Kolkata'}):''}</p>
  {fieldNames.map(k=><p key={k}><strong>{k.replaceAll('_',' ')}:</strong> {label(item[k])}</p>)}
- <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>{(tab==='customer_bookings'?['pending','confirmed','cancelled']:['pending','approved','rejected']).map(s=><button key={s} disabled={loading||item.status===s} onClick={()=>changeStatus(item.id,s)} style={{padding:9}}>{s}</button>)}</div></article>)}
+ <div style={{display:'flex',gap:8,flexWrap:'wrap'}}>{tab==='customer_bookings'&&<button type="button" onClick={()=>sendConfirmation(item)} style={{padding:10,background:'#176a57',color:'white',border:0,borderRadius:6}}>Prepare WhatsApp Confirmation ↗</button>}{(tab==='customer_bookings'?['pending','confirmed','cancelled']:['pending','approved','rejected']).map(s=><button key={s} disabled={loading||item.status===s} onClick={()=>changeStatus(item.id,s)} style={{padding:9}}>{s}</button>)}</div></article>)}
  </>}</div>}
  {message&&<p role="status" style={{padding:12,background:'#fff2df'}}>{message}</p>}
  <p style={{fontSize:12,color:'#527368'}}>Access to records is enforced by Supabase RLS. A signed-in user is not automatically an admin.</p>
