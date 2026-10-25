@@ -192,3 +192,11 @@ footer{border-top:1px solid #c8b78f}
 /* Contrast accessibility fix: base hero h1 uses dark ink; override for forest retreat hero. */
 .retreat-first-hero .hero-content h1{color:#fff9ed!important;text-shadow:0 2px 12px #001b111f}
 .retreat-first-hero .hero-content h1 em{color:#f1ce8f!important}
+
+/* Maintain legible contrast in the retreat teaser after the editorial refresh. */
+.retreat-teaser{background:#f1e9d7;color:#153d31}
+.retreat-teaser strong{color:#153d31}
+.retreat-teaser p:not(.eyebrow){color:#425d50}
+.retreat-teaser .eyebrow{color:#9a783e}
+.retreat-teaser a{color:#153d31;background:transparent;border-color:#a98851;font-weight:700}
+.retreat-teaser a:hover{background:#153d31;color:#fff9ed}
