@@ -153,3 +153,38 @@ footer{border-top:1px solid #c8b78f}
 
 /* Retreat-first homepage */
 .retreat-first-hero .hero-content{background:linear-gradient(135deg,#f8f5e9,#e9eddf)}.retreat-first-hero .hero-sub{max-width:610px}.retreat-first-hero .actions .primary{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}.retreat-hero-status{max-width:590px;margin:26px 0 12px;padding:17px 20px;border-left:3px solid #b99961;background:#fffaf0}.retreat-hero-status strong{font-size:11px;letter-spacing:.1em;color:#8c713e}.retreat-hero-status p{font-size:12px;line-height:1.75;margin:9px 0 0;color:#52685c}.retreat-first-hero .hero-note a{text-decoration:underline;text-underline-offset:4px}.retreat-first-hero .hero-art{filter:saturate(.8)}@media(max-width:760px){.retreat-first-hero .hero-content{padding-bottom:35px}.retreat-first-hero .actions a{min-height:45px}.retreat-hero-status{padding:14px 16px}}
+
+
+/* 2026 premium retreat editorial refresh — images are illustrative, not partner property photos */
+.retreat-first-hero{min-height:720px;grid-template-columns:52% 48%;background:#102c24}
+.retreat-first-hero .hero-content{background:linear-gradient(150deg,#102c24 0%,#194735 75%,#2a5744 100%);color:#fff9ed;padding-top:100px;padding-bottom:72px}
+.retreat-first-hero .eyebrow{color:#e7c98d}
+.retreat-first-hero h1{font-size:clamp(48px,5.5vw,88px);line-height:1.08;letter-spacing:-.045em;margin:27px 0}
+.retreat-first-hero h1 em{color:#e8c88d}
+.retreat-first-hero .hero-sub{color:#e0e8df;line-height:1.85;font-size:15px}
+.retreat-first-hero .actions{gap:22px;flex-wrap:wrap}
+.retreat-first-hero .actions .primary{background:#d3b47a;color:#173b2c;font-weight:700;border-radius:3px;box-shadow:0 10px 26px #0002}
+.retreat-first-hero .actions .primary:hover{background:#ebcc90}
+.retreat-first-hero .actions .outline{color:#fff7e7;border-color:#e0c48e}
+.retreat-first-hero .retreat-hero-status{background:#ffffff12;border-color:#d3b47a}
+.retreat-first-hero .retreat-hero-status strong{color:#f3d49a}
+.retreat-first-hero .retreat-hero-status p,.retreat-first-hero .hero-note{color:#d9e4dc}
+.retreat-first-hero .hero-note a{color:#f1d49f}
+.retreat-first-hero .hero-assurance{color:#eee3c8}
+.retreat-first-hero .hero-art{filter:none;background:linear-gradient(180deg,#102c2410,#0d281b77),url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1400&q=85') center/cover no-repeat;min-height:670px}
+.retreat-first-hero .hero-art .sun,.retreat-first-hero .hero-art .leaf,.retreat-first-hero .hero-art .art-label{display:none}
+.retreat-first-hero .hero-photo-caption{position:absolute;z-index:2;bottom:55px;left:8%;color:#fff;text-shadow:0 2px 15px #0008}
+.retreat-first-hero .hero-photo-caption span{display:block;font-size:10px;letter-spacing:.22em;color:#f3e0b9;margin-bottom:15px}
+.retreat-first-hero .hero-photo-caption strong{display:block;font:400 clamp(34px,3.5vw,54px)/1.15 'Playfair Display',serif}
+.retreat-teaser{background:#f1e9d7}
+.retreat-teaser strong{font-family:'Playfair Display',serif;letter-spacing:-.02em}
+#sujok-therapy{border-top:1px solid #e4dac6;border-bottom:1px solid #e4dac6}
+.retreat-page .retreat-hero{position:relative;isolation:isolate;background:linear-gradient(90deg,#102b24ed 0%,#153d31c9 57%,#102b2460 100%),url('https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;color:#fffaf0;min-height:590px;display:flex;flex-direction:column;justify-content:center}
+.retreat-page .retreat-hero h1{font-size:clamp(48px,6vw,86px);line-height:1.12;max-width:1000px}
+.retreat-page .retreat-hero>p{max-width:690px;line-height:1.8}
+.retreat-page .retreat-hero .eyebrow{color:#f0d8a7}
+.retreat-page .retreat-hero .retreat-cta{align-self:flex-start;background:#d2b27a;color:#173a2c;font-weight:700}
+.retreat-page .retreat-section>h2{letter-spacing:-.035em}
+.retreat-page .retreat-grid article{border:1px solid #e5dfd1;border-radius:5px;box-shadow:0 10px 35px #18392a0a;transition:transform .2s ease,box-shadow .2s ease}
+.retreat-page .retreat-grid article:hover{transform:translateY(-4px);box-shadow:0 18px 40px #18392a16}
+@media(max-width:760px){.retreat-first-hero{display:flex;flex-direction:column;min-height:0}.retreat-first-hero .hero-content{padding:65px 7% 42px}.retreat-first-hero h1{font-size:clamp(43px,11vw,65px)}.retreat-first-hero .hero-art{min-height:370px;background-position:center 55%}.retreat-first-hero .hero-photo-caption{bottom:34px}.retreat-first-hero .hero-photo-caption strong{font-size:35px}.retreat-page .retreat-hero{min-height:550px;padding:75px 7%}.retreat-page .retreat-hero h1{font-size:clamp(43px,10vw,65px)}}
